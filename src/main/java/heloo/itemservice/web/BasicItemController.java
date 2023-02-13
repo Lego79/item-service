@@ -10,7 +10,7 @@ import javax.annotation.PostConstruct;
 import java.util.List;
 @Controller
 @RequestMapping("/basic/items")
-@RequiredArgsConstructor
+@RequiredArgsConstructor //final이 붙은 부분만 생성자를 생성한다
 public class BasicItemController {
     private final ItemRepository itemRepository;
     @GetMapping
