@@ -28,7 +28,7 @@ public class BasicItemController {
         itemRepository.save(new Item("testB", 20000, 20));
     }
 
-    @GetMapping("/{itemId}")
+    @GetMapping("/{itemId}") //GET으로 오는 요청 처리
     public String item(@PathVariable Long itemId, Model model) {
         Item item = itemRepository.findById(itemId);
         model.addAttribute("item", item);
