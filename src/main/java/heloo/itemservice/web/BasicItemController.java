@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.PostConstruct;
 import java.util.List;
 @Controller
-@RequestMapping("/basic/items")
+@RequestMapping("/basic/items") //BASIC, ITEMS를 경로 설정해서 들어오는 요청을 응답해줌
 @RequiredArgsConstructor //final이 붙은 부분만 생성자를 생성한다
 public class BasicItemController {
     private final ItemRepository itemRepository;
