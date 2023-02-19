@@ -15,9 +15,9 @@ public class BasicItemController {
     private final ItemRepository itemRepository;
     @GetMapping
     public String items(Model model) {
-        List<Item> items = itemRepository.findAll();
+        List<Item> items = itemRepository.findAll(); //
         model.addAttribute("items", items);
-        return "basic/items";
+        return "basic/items"; // URL 리턴하면서 받은 값을 담아서 리턴
     }
     /**
      * 테스트용 데이터 추가
