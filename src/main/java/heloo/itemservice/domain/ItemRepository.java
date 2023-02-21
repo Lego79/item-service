@@ -15,7 +15,7 @@ public class ItemRepository {
     private static long sequence = 0L; //static
 
     public Item save(Item item) {
-        item.setId(++sequence);
+        item.setId(++sequence); //++를 사용해서 더하는 로직
         store.put(item.getId(), item);
         return item;
     }
