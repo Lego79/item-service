@@ -22,7 +22,7 @@ public class BasicItemController {
     /**
      * 테스트용 데이터 추가
      */
-    @PostConstruct
+    @PostConstruct //의존성 주입이 이루어진 후 초기화를 수행하는 메서드이다. @PostConstruct가 붙은 메서드는 클래스가 service(로직을 탈 때? 로 생각 됨)를 수행하기 전에 발생한다. 이 메서드는 다른 리소스에서 호출되지 않는다해도 수행된다.
     public void init() {
         itemRepository.save(new Item("testA", 10000, 10));
         itemRepository.save(new Item("testB", 20000, 20));
