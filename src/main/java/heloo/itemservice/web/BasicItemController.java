@@ -12,7 +12,7 @@ import java.util.List;
 @RequestMapping("/basic/items") //BASIC, ITEMS를 경로 설정해서 들어오는 요청을 응답해줌
 @RequiredArgsConstructor //final이 붙은 부분만 생성자를 생성한다
 public class BasicItemController {
-    private final ItemRepository itemRepository;
+    private final ItemRepository itemRepository; //파이널 할당된 - @RequiredArgsConstructor - 로 생성
     @GetMapping
     public String items(Model model) {
         List<Item> items = itemRepository.findAll(); //
