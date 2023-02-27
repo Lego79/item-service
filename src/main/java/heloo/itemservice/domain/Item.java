@@ -14,7 +14,7 @@ public class Item {
 
     }
 
-    public Item(String itemName, Integer price, Integer quantity) {
+    public Item(String itemName, Integer price, Integer quantity) { //생성자를 만들어 두지 않으면 어노테이션이 제대로 작동하지 않음
         this.itemName = itemName;
         this.price = price;
         this.quantity = quantity;
